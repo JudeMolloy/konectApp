@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9ADDB032119077103BB921E2 /* Pods_KonectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A031E8E1019A3E5E4F513116 /* Pods_KonectApp.framework */; };
+		CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1BBC20096DF40090E802 /* AuthService.swift */; };
 		CE807AE71FFD876800B60D16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE807AE61FFD876800B60D16 /* GoogleService-Info.plist */; };
 		CE807AE91FFD898300B60D16 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807AE81FFD898300B60D16 /* DataService.swift */; };
 		CE81D6CF1FD45A3F000AF38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81D6CE1FD45A3F000AF38E /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 		5FFA9169910AB6D974595311 /* Pods-KonectApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KonectApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KonectApp/Pods-KonectApp.debug.xcconfig"; sourceTree = "<group>"; };
 		91906728A065DF4F404B6BDF /* Pods-KonectApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KonectApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-KonectApp/Pods-KonectApp.release.xcconfig"; sourceTree = "<group>"; };
 		A031E8E1019A3E5E4F513116 /* Pods_KonectApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KonectApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2F1BBC20096DF40090E802 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE807AE61FFD876800B60D16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE807AE81FFD898300B60D16 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CE81D6CB1FD45A3F000AF38E /* KonectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CE807AE81FFD898300B60D16 /* DataService.swift */,
+				CE2F1BBC20096DF40090E802 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				CE81D6D11FD45A3F000AF38E /* ViewController.swift in Sources */,
 				CEE769F81FD9B9F400C14797 /* RoundedButton.swift in Sources */,
+				CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */,
 				CE81D6CF1FD45A3F000AF38E /* AppDelegate.swift in Sources */,
 				CE807AE91FFD898300B60D16 /* DataService.swift in Sources */,
 			);
@@ -410,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.judemolloy.KonectApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -427,7 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.judemolloy.KonectApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
