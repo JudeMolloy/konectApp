@@ -30,13 +30,11 @@ class AuthService {
     func logInUser(withEmail email: String, andPassword password: String, logInComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            guard let user = user else {
+            if error != nil {
                 logInComplete(false, error)
                 return
             }
-            
             logInComplete(true, nil)
-            
         }
         
     }
