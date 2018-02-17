@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		9ADDB032119077103BB921E2 /* Pods_KonectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A031E8E1019A3E5E4F513116 /* Pods_KonectApp.framework */; };
 		CE0FBF6A201D1CA000E5FB83 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FBF69201D1CA000E5FB83 /* CreateAccountVC.swift */; };
+		CE1772C5202904F5002600DE /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1772C4202904F5002600DE /* QRCodeVC.swift */; };
+		CE191BB9202B99BE0071313D /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE191BB8202B99BE0071313D /* QRScannerController.swift */; };
 		CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1BBC20096DF40090E802 /* AuthService.swift */; };
+		CE30DA2D202A694D0021F8C0 /* QRCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30DA2C202A694D0021F8C0 /* QRCodeModel.swift */; };
+		CE458A4E20238E0B00D7140E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE458A4D20238E0B00D7140E /* ProfileVC.swift */; };
 		CE6D07CA201E0526003FECDC /* EditAccountInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D07C9201E0526003FECDC /* EditAccountInfoVC.swift */; };
 		CE6D07CC201E0540003FECDC /* EditLinkedAccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D07CB201E0540003FECDC /* EditLinkedAccountsVC.swift */; };
 		CE807AE71FFD876800B60D16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE807AE61FFD876800B60D16 /* GoogleService-Info.plist */; };
@@ -29,7 +33,11 @@
 		91906728A065DF4F404B6BDF /* Pods-KonectApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KonectApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-KonectApp/Pods-KonectApp.release.xcconfig"; sourceTree = "<group>"; };
 		A031E8E1019A3E5E4F513116 /* Pods_KonectApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KonectApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FBF69201D1CA000E5FB83 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		CE1772C4202904F5002600DE /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		CE191BB8202B99BE0071313D /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		CE2F1BBC20096DF40090E802 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CE30DA2C202A694D0021F8C0 /* QRCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModel.swift; sourceTree = "<group>"; };
+		CE458A4D20238E0B00D7140E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CE6D07C9201E0526003FECDC /* EditAccountInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountInfoVC.swift; sourceTree = "<group>"; };
 		CE6D07CB201E0540003FECDC /* EditLinkedAccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLinkedAccountsVC.swift; sourceTree = "<group>"; };
 		CE807AE61FFD876800B60D16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -83,6 +91,9 @@
 				CE0FBF69201D1CA000E5FB83 /* CreateAccountVC.swift */,
 				CE6D07C9201E0526003FECDC /* EditAccountInfoVC.swift */,
 				CE6D07CB201E0540003FECDC /* EditLinkedAccountsVC.swift */,
+				CE458A4D20238E0B00D7140E /* ProfileVC.swift */,
+				CE1772C4202904F5002600DE /* QRCodeVC.swift */,
+				CE191BB8202B99BE0071313D /* QRScannerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +108,7 @@
 		CE807AE31FFD860800B60D16 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE30DA2C202A694D0021F8C0 /* QRCodeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,13 +293,17 @@
 			files = (
 				CE81D6D11FD45A3F000AF38E /* ViewController.swift in Sources */,
 				CEE769F81FD9B9F400C14797 /* RoundedButton.swift in Sources */,
+				CE30DA2D202A694D0021F8C0 /* QRCodeModel.swift in Sources */,
+				CE191BB9202B99BE0071313D /* QRScannerController.swift in Sources */,
 				CE0FBF6A201D1CA000E5FB83 /* CreateAccountVC.swift in Sources */,
 				CE6D07CA201E0526003FECDC /* EditAccountInfoVC.swift in Sources */,
 				CED88B50201BFFB10099A5C7 /* LoginVC.swift in Sources */,
 				CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */,
 				CE81D6CF1FD45A3F000AF38E /* AppDelegate.swift in Sources */,
 				CE6D07CC201E0540003FECDC /* EditLinkedAccountsVC.swift in Sources */,
+				CE1772C5202904F5002600DE /* QRCodeVC.swift in Sources */,
 				CE807AE91FFD898300B60D16 /* DataService.swift in Sources */,
+				CE458A4E20238E0B00D7140E /* ProfileVC.swift in Sources */,
 				CED88B4E201BFF150099A5C7 /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

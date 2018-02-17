@@ -12,6 +12,7 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailField.delegate = self
@@ -23,7 +24,9 @@ class LoginVC: UIViewController {
             
             AuthService.instance.logInUser(withEmail: emailField.text!, andPassword: passwordField.text!, logInComplete: { (success, loginError) in
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC")
+                    self.present(tabBarVC, animated: true, completion: nil)
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                     
