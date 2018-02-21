@@ -33,6 +33,19 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
+    func addExtraInformation(userData: Dictionary<String, Any>) {
+        // Adds extra information for users
+        
+        let uid = Auth.auth().currentUser?.uid
+        
+        if uid != nil{
+            let REF_DETAILS = REF_USERS.child(uid!).child("details")
+            REF_DETAILS.updateChildValues(userData)
+        }
+        
+        
+    }
+    
     func createConnection(user1: String, user2: String) {
         // Creates the relationship between two users
         

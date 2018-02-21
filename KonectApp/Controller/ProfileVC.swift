@@ -18,6 +18,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var jobTitleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let currentUser = Auth.auth().currentUser?.email
         if currentUser != nil {
             jobTitleLabel.text = currentUser
