@@ -13,11 +13,17 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    override init() {
+        super.init()
+        // Override point for customization after application launch.
+        FirebaseApp.configure()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+//        Commented the following line out as it sometimes does not call fast enough in simulator so I have added the firebase configure to the override init function above
+//        FirebaseApp.configure()
         
         if Auth.auth().currentUser == nil {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)

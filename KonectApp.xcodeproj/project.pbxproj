@@ -12,12 +12,15 @@
 		CE1772C5202904F5002600DE /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1772C4202904F5002600DE /* QRCodeVC.swift */; };
 		CE191BB9202B99BE0071313D /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE191BB8202B99BE0071313D /* QRScannerController.swift */; };
 		CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1BBC20096DF40090E802 /* AuthService.swift */; };
-		CE30DA2D202A694D0021F8C0 /* QRCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30DA2C202A694D0021F8C0 /* QRCodeModel.swift */; };
 		CE458A4E20238E0B00D7140E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE458A4D20238E0B00D7140E /* ProfileVC.swift */; };
 		CE6D07CA201E0526003FECDC /* EditAccountInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D07C9201E0526003FECDC /* EditAccountInfoVC.swift */; };
 		CE6D07CC201E0540003FECDC /* EditLinkedAccountsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D07CB201E0540003FECDC /* EditLinkedAccountsVC.swift */; };
 		CE807AE71FFD876800B60D16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE807AE61FFD876800B60D16 /* GoogleService-Info.plist */; };
 		CE807AE91FFD898300B60D16 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE807AE81FFD898300B60D16 /* DataService.swift */; };
+		CE81216C2038569B00A0C1E6 /* KonectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81216B2038569B00A0C1E6 /* KonectionsVC.swift */; };
+		CE81216E20386C8400A0C1E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81216D20386C8400A0C1E6 /* User.swift */; };
+		CE8121722038D6C200A0C1E6 /* KonectionsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8121712038D6C200A0C1E6 /* KonectionsTableVC.swift */; };
+		CE8121742038F3A900A0C1E6 /* fdahfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8121732038F3A900A0C1E6 /* fdahfTableViewController.swift */; };
 		CE81D6CF1FD45A3F000AF38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81D6CE1FD45A3F000AF38E /* AppDelegate.swift */; };
 		CE81D6D11FD45A3F000AF38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81D6D01FD45A3F000AF38E /* ViewController.swift */; };
 		CE81D6D41FD45A3F000AF38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE81D6D21FD45A3F000AF38E /* Main.storyboard */; };
@@ -36,12 +39,15 @@
 		CE1772C4202904F5002600DE /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		CE191BB8202B99BE0071313D /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		CE2F1BBC20096DF40090E802 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		CE30DA2C202A694D0021F8C0 /* QRCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModel.swift; sourceTree = "<group>"; };
 		CE458A4D20238E0B00D7140E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CE6D07C9201E0526003FECDC /* EditAccountInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountInfoVC.swift; sourceTree = "<group>"; };
 		CE6D07CB201E0540003FECDC /* EditLinkedAccountsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLinkedAccountsVC.swift; sourceTree = "<group>"; };
 		CE807AE61FFD876800B60D16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE807AE81FFD898300B60D16 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CE81216B2038569B00A0C1E6 /* KonectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonectionsVC.swift; sourceTree = "<group>"; };
+		CE81216D20386C8400A0C1E6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE8121712038D6C200A0C1E6 /* KonectionsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonectionsTableVC.swift; sourceTree = "<group>"; };
+		CE8121732038F3A900A0C1E6 /* fdahfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fdahfTableViewController.swift; sourceTree = "<group>"; };
 		CE81D6CB1FD45A3F000AF38E /* KonectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE81D6CE1FD45A3F000AF38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE81D6D01FD45A3F000AF38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,9 @@
 				CE458A4D20238E0B00D7140E /* ProfileVC.swift */,
 				CE1772C4202904F5002600DE /* QRCodeVC.swift */,
 				CE191BB8202B99BE0071313D /* QRScannerController.swift */,
+				CE81216B2038569B00A0C1E6 /* KonectionsVC.swift */,
+				CE8121712038D6C200A0C1E6 /* KonectionsTableVC.swift */,
+				CE8121732038F3A900A0C1E6 /* fdahfTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -108,7 +117,7 @@
 		CE807AE31FFD860800B60D16 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE30DA2C202A694D0021F8C0 /* QRCodeModel.swift */,
+				CE81216D20386C8400A0C1E6 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,14 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8121722038D6C200A0C1E6 /* KonectionsTableVC.swift in Sources */,
 				CE81D6D11FD45A3F000AF38E /* ViewController.swift in Sources */,
 				CEE769F81FD9B9F400C14797 /* RoundedButton.swift in Sources */,
-				CE30DA2D202A694D0021F8C0 /* QRCodeModel.swift in Sources */,
+				CE81216C2038569B00A0C1E6 /* KonectionsVC.swift in Sources */,
 				CE191BB9202B99BE0071313D /* QRScannerController.swift in Sources */,
 				CE0FBF6A201D1CA000E5FB83 /* CreateAccountVC.swift in Sources */,
 				CE6D07CA201E0526003FECDC /* EditAccountInfoVC.swift in Sources */,
+				CE8121742038F3A900A0C1E6 /* fdahfTableViewController.swift in Sources */,
 				CED88B50201BFFB10099A5C7 /* LoginVC.swift in Sources */,
 				CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */,
+				CE81216E20386C8400A0C1E6 /* User.swift in Sources */,
 				CE81D6CF1FD45A3F000AF38E /* AppDelegate.swift in Sources */,
 				CE6D07CC201E0540003FECDC /* EditLinkedAccountsVC.swift in Sources */,
 				CE1772C5202904F5002600DE /* QRCodeVC.swift in Sources */,
