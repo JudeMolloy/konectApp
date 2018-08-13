@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class CreateAccountVC: UIViewController {
 
@@ -17,8 +18,34 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkPermission()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func checkPermission() {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+        case .authorized:
+            print("Access is granted by user")
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({
+                (newStatus) in
+                print("status is \(newStatus)")
+                if newStatus ==  PHAuthorizationStatus.authorized {
+                    /* do stuff here */
+                    print("success")
+                }
+            })
+            print("It is not determined until now")
+        case .restricted:
+            // same same
+            print("User do not have access to photo album.")
+        case .denied:
+            // same same
+            print("User has denied the permission.")
+        }
     }
 
     @IBAction func nextButtonPressed(_ sender: Any) {
@@ -28,10 +55,11 @@ class CreateAccountVC: UIViewController {
             // Add any more input validation in here
             AuthService.instance.registerUser(withEmail: emailField.text!, andPassword: passwordField.text!, userCreationComplete: { (success, registrationError) in
                 if success {
+                    print("registered")
                     
                     // Log in user
                     AuthService.instance.logInUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, logInComplete: { (success, nil) in
-                            self.dismiss(animated: true, completion: nil)
+//                            self.dismiss(animated: true, completion: nil)
                             print("Successfully registered user")
                     })
                     

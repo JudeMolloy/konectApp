@@ -10,8 +10,11 @@ import UIKit
 import Firebase
 
 class User: NSObject {
-    var connections: AnyObject?
-    var email: String?
-    var test: String?
-
+    var bio: String?
+    var displayName: String?
+    var facebook: String?
+    var jobTitle: String?
+    var profileImageURL: String?
+    var sharedEmail: String?
+    var twitter: String?
 }

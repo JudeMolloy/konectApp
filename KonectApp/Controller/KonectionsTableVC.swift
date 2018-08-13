@@ -31,29 +31,71 @@ class KonectionsTableVC: UITableViewController {
     
     func fetchUsers() {
         dataREF.REF_USERS.child(currentUserUID!).child("connections").observe(.childAdded) { (snapshot) in
+            print("HHDHDHHDHDHDHDHDHDHD")
             print(snapshot.key)
             let connectionUID = snapshot.key
             
-            self.dataREF.REF_USERS.child(connectionUID).observe(.childAdded, with: { (snapshot) in
+            let query = self.dataREF.REF_USERS.child(connectionUID).child("details").queryOrdered(byChild: "displayName")
+            var dictionary = [String: AnyObject]()
+            
+            query.observe(.value) { (snapshot) in
+                for child in snapshot.children.allObjects as! [DataSnapshot] {
+                    dictionary.updateValue(child.value as AnyObject, forKey: child.key)
+                    
+                    
+
+                }
+             
+ 
                 
                 let user = User()
                 
-                // fix the vacant space problem by using a database child to store details
+                user.displayName = dictionary["displayName"] as? String ?? "Name not found"
+                user.sharedEmail = dictionary["sharedEmail"] as? String ?? "Email not found"
+                user.bio = dictionary["bio"] as? String ?? "Bio not found"
+                user.facebook = dictionary["facebook"] as? String ?? "Facebook not found"
+                user.twitter = dictionary["twitter"] as? String ?? "Twitter not found"
+                user.profileImageURL = dictionary["profileImageURL"] as? String ?? "https://firebasestorage.googleapis.com/v0/b/konect-u.appspot.com/o/F233E787-9799-4210-9321-733C373088C7.png?alt=media&token=52791d6f-3d17-4ba0-932e-329abb8e1a05"
                 
-                if snapshot.key != "connections" {
-                    user.email = snapshot.value! as? String
-                    print("AAAAA")
-                    print(user.email!)
-                    print("BBBBB")
-                }
                 
+                
+
+                print(user.displayName!)
                 self.users.append(user)
+                print("NEW USER???")
+                print(self.users)
+                
+                DispatchQueue.main.async { self.tableView.reloadData() }
+//                    if let value = child.value as? NSDictionary {
+//                        let user = User()
+//                        let name = value["name"] as? String ?? "Name not found"
+//                        let email = value["email"] as? String ?? "Email not found"
+//                        self.users.append(user)
+//                        print(user)
+//                        DispatchQueue.main.async { self.tableView.reloadData() }
+//                    }
+                
+            }
+//            self.dataREF.REF_USERS.child(connectionUID).child("details").observe(.childAdded, with: { (snapshot) in
+//
+//                for child in snapshot.children.allObjects as! [DataSnapshot] {
+//                    if let value = child.value as? NSDictionary {
+//                        let user = User()
+//                        let name = value["displayName"] as? String
+//                    }
+//                }
+//                if let dictionary = snapshot.value as? [String: AnyObject] {
+//                    let user = User()
+//                    user.setValuesForKeys(dictionary)
+//                    self.users.append(user)
+//                    print(user.displayName!)
+//                }
+//
                 
                 DispatchQueue.main.async { self.tableView.reloadData() }
                 
-                print(snapshot)
-                print("OK")
-            })
+
+//            })
             
         }
     }
@@ -66,8 +108,34 @@ class KonectionsTableVC: UITableViewController {
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
         
+        cell.imageView?.image = UIImage(named: "defaultProfileImage")
+        
         let user = users[indexPath.row]
-        cell.textLabel?.text = user.email
+        cell.textLabel?.text = user.displayName
+        cell.detailTextLabel?.text = user.sharedEmail
+        
+
+        
+        if user.profileImageURL != "nil" {
+            if let profileImageURL = user.profileImageURL {
+
+                let url = URL(string: profileImageURL)
+
+                URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+
+                        if error != nil {
+                            print(error)
+                            return
+                        }
+
+                        DispatchQueue.main.async {
+                            cell.imageView?.image = UIImage(data: data!)
+                        }
+
+                    }).resume()
+                
+            }
+        }
         
         return cell
         
@@ -77,6 +145,32 @@ class KonectionsTableVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+//    func fetchUsers() {
+//        dataREF.REF_USERS.child(currentUserUID!).child("connections").observe(.childAdded) { (snapshot) in
+//            print(snapshot.key)
+//            let connectionUID = snapshot.key
+//
+//            self.dataREF.REF_USERS.child(connectionUID).child("details").observe(.childAdded, with: { (snapshot) in
+//
+//                let user = User()
+//
+//                // fix the vacant space problem by using a database child to store details
+//
+//                user = snapshot.value! as? String
+//
+//
+//                print(user)
+//
+//                DispatchQueue.main.async { self.tableView.reloadData() }
+//
+//                print(snapshot)
+//                print("OK")
+//            })
+//
+//        }
+//    }
     
 }
 

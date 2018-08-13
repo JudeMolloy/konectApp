@@ -18,7 +18,7 @@ class DataService {
     private var _REF_BASE = DB_BASE
     private var _REF_USERS = DB_BASE.child("users")
     
-
+    
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE
@@ -33,18 +33,6 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
-    func addExtraInformation(userData: Dictionary<String, Any>) {
-        // Adds extra information for users
-        
-        let uid = Auth.auth().currentUser?.uid
-        
-        if uid != nil{
-            let REF_DETAILS = REF_USERS.child(uid!).child("details")
-            REF_DETAILS.updateChildValues(userData)
-        }
-        
-        
-    }
     
     func createConnection(user1: String, user2: String) {
         // Creates the relationship between two users
@@ -64,4 +52,17 @@ class DataService {
         REF_CONNECTION2.child(user1).setValue(true)
     }
     
+    
+    func addDetailsForUser(values: [String: AnyObject]) {
+        // Adds extra information for users
+        
+        let uid = Auth.auth().currentUser?.uid
+        if uid != nil {
+            let REF_DETAILS = REF_USERS.child(uid!).child("details")
+            REF_DETAILS.updateChildValues(values)
+        }
+        
+    }
 }
+
+

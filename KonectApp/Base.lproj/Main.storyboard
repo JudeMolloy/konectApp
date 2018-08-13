@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayF-dI-OFe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEL-l4-Rex">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -448,9 +448,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhI-hr-4k5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5520.8000000000002" y="669.45812807881771"/>
+            <point key="canvasLocation" x="5439" y="982"/>
         </scene>
-        <!--Konections TableVC-->
+        <!--Konnections-->
         <scene sceneID="dMj-bM-43Z">
             <objects>
                 <tableViewController id="JIq-VD-xOa" customClass="KonectionsTableVC" customModule="KonectApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -473,12 +473,13 @@
                             <outlet property="delegate" destination="JIq-VD-xOa" id="R6x-8U-f2T"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Konnections" id="bUV-Le-QhS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmv-Ie-qGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6251" y="658"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile-->
         <scene sceneID="fmT-oa-R1f">
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="Tsa-6V-05w" customClass="ProfileVC" customModule="KonectApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -601,7 +602,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tcW-gk-Mc6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jls-BA-A6G"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="jls-BA-A6G"/>
                     <connections>
                         <outlet property="jobTitleLabel" destination="Xlg-RQ-zuT" id="n12-4d-Vnf"/>
                         <outlet property="nameLabel" destination="xCt-mW-SBf" id="BXU-zx-yoe"/>
@@ -687,7 +688,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Tsa-6V-05w" kind="relationship" relationship="viewControllers" id="hR4-hp-9x6"/>
-                        <segue destination="U2x-O7-7CH" kind="relationship" relationship="viewControllers" id="SN1-LE-JbA"/>
+                        <segue destination="JIq-VD-xOa" kind="relationship" relationship="viewControllers" id="aNC-SQ-Vya"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2K3-D0-sGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -771,13 +772,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="eur-bB-FQb"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="jkl" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="75x-zR-DgC">
-                                <rect key="frame" x="40" y="493" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.19169937070000001" green="0.25155758859999999" blue="0.37264972930000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -806,21 +800,22 @@
         <!--Add DetailsVC-->
         <scene sceneID="prf-sA-jCx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rtR-Pu-PZW" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EditAccountInfoVC" id="ayF-dI-OFe" customClass="AddDetailsVC" customModule="KonectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uwg-4E-yeW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ex-wr-dSa">
-                                <rect key="frame" x="0.0" y="44" width="375" height="1172"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="1272"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDx-nY-6HI">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1350"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OpeningBG" translatesAutoresizingMaskIntoConstraints="NO" id="YGz-uv-7qI">
-                                                <rect key="frame" x="-102" y="-85" width="631" height="1287"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpeningBG" translatesAutoresizingMaskIntoConstraints="NO" id="YGz-uv-7qI">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1350"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1350" id="tSH-Vy-WRp"/>
+                                                </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-Am-DRI">
                                                 <rect key="frame" x="20" y="0.0" width="24" height="24"/>
@@ -851,7 +846,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lI-8z-uef">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="9lI-8z-uef">
                                                         <rect key="frame" x="0.0" y="136.33333333333334" width="275" height="102"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="102" id="YRT-6V-mP4"/>
@@ -945,8 +940,12 @@
                                         <constraints>
                                             <constraint firstItem="wiS-qu-z2e" firstAttribute="top" secondItem="dDx-nY-6HI" secondAttribute="top" constant="51" id="0rT-DU-m97"/>
                                             <constraint firstItem="HfH-Am-DRI" firstAttribute="top" secondItem="dDx-nY-6HI" secondAttribute="top" id="IXq-zn-KE0"/>
-                                            <constraint firstAttribute="height" constant="1250" id="Kjz-Ss-F45"/>
+                                            <constraint firstAttribute="height" constant="1350" id="Kjz-Ss-F45"/>
+                                            <constraint firstAttribute="trailing" secondItem="YGz-uv-7qI" secondAttribute="trailing" id="OV0-WL-jH7"/>
                                             <constraint firstAttribute="trailing" secondItem="wiS-qu-z2e" secondAttribute="trailing" constant="50" id="VIs-19-oLB"/>
+                                            <constraint firstAttribute="bottom" secondItem="YGz-uv-7qI" secondAttribute="bottom" id="WGK-Gv-dvr"/>
+                                            <constraint firstItem="YGz-uv-7qI" firstAttribute="leading" secondItem="dDx-nY-6HI" secondAttribute="leading" id="aK3-vg-RHq"/>
+                                            <constraint firstItem="YGz-uv-7qI" firstAttribute="top" secondItem="dDx-nY-6HI" secondAttribute="top" id="itE-oD-9ex"/>
                                             <constraint firstItem="HfH-Am-DRI" firstAttribute="leading" secondItem="dDx-nY-6HI" secondAttribute="leading" constant="20" id="u3e-aA-q17"/>
                                             <constraint firstItem="wiS-qu-z2e" firstAttribute="leading" secondItem="dDx-nY-6HI" secondAttribute="leading" constant="50" id="zQg-yv-saW"/>
                                         </constraints>
@@ -970,7 +969,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ABN-2I-TLa"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1250"/>
+                    <size key="freeformSize" width="375" height="1350"/>
                     <connections>
                         <outlet property="bioInput" destination="f8U-lE-FWw" id="S51-hJ-i4f"/>
                         <outlet property="displayEmailInput" destination="fWe-wh-aeO" id="ylp-EC-KUW"/>
@@ -981,6 +980,7 @@
                         <outlet property="twitterInput" destination="Ete-c0-s10" id="V6l-9u-pcX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtR-Pu-PZW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888.8" y="744.82758620689663"/>
         </scene>
@@ -1107,6 +1107,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="7KW-gR-Xdx"/>
         <segue reference="h8a-EK-aPy"/>
-        <segue reference="eur-bB-FQb"/>
+        <segue reference="aNC-SQ-Vya"/>
+        <segue reference="bZb-GO-xBn"/>
     </inferredMetricsTieBreakers>
 </document>

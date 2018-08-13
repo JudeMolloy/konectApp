@@ -11,6 +11,7 @@ import Firebase
 
 class ProfileVC: UIViewController {
 
+    let dataREF = DataService.instance
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -18,11 +19,36 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var jobTitleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let currentUserUID = Auth.auth().currentUser?.uid
         
         let currentUser = Auth.auth().currentUser?.email
         if currentUser != nil {
             jobTitleLabel.text = currentUser
         }
+        
+        let profileImage =         dataREF.REF_USERS.child(currentUserUID!).child("details").child("profileImageURL")
+        
+        if profileImage != nil {
+            
+            let url = URL(string: profileImage)
+//            I AM HERE,    I NEED TO GET THE PROFILE IMAGE USING A SNAPSHOT
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                
+                if error != nil {
+                    print(error)
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    cell.imageView?.image = UIImage(data: data!)
+                }
+                
+            }).resume()
+            
+        }
+    
+        
         // Do any additional setup after loading the view.
     }
     
