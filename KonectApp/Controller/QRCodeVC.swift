@@ -13,10 +13,11 @@ class QRCodeVC: UIViewController {
 
     @IBOutlet weak var QRCodeImage: UIImageView!
     
+    var currentUserUID = Auth.auth().currentUser?.uid
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let currentUserUID = Auth.auth().currentUser?.uid
         
         func generateQRCode(input: String) {
             

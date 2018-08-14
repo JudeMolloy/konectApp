@@ -13,7 +13,11 @@ class ProfileVC: UIViewController {
 
     let dataREF = DataService.instance
     
-    let currentUserUID = Auth.auth().currentUser?.uid
+    var currentUserUID = Auth.auth().currentUser?.uid
+    
+    @IBOutlet weak var openCameraButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var facebookLabel: UILabel!
@@ -26,6 +30,23 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // need to fix the button that is shown
+        backButton.isHidden = false
+        
+        openCameraButton.isHidden = false
+      
+        
+        if currentUserUID != Auth.auth().currentUser?.uid {
+            
+            openCameraButton.isHidden = true
+
+            
+        } else {
+            
+            backButton.isHidden = true
+            
+        }
         
         fetchUserDetails()
         
@@ -105,7 +126,11 @@ class ProfileVC: UIViewController {
     }
     
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var segueDestination = segue.destination as! QRCodeVC
+        
+        segueDestination.currentUserUID = currentUserUID
+    }
 
     
     @IBAction func signOutButtonPressed(_ sender: Any) {

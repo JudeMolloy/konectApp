@@ -33,6 +33,7 @@ class KonectionsTableVC: UITableViewController {
         dataREF.REF_USERS.child(currentUserUID!).child("connections").observe(.childAdded) { (snapshot) in
             let connectionUID = snapshot.key
             
+            
             let query = self.dataREF.REF_USERS.child(connectionUID).child("details").queryOrdered(byChild: "displayName")
             var dictionary = [String: AnyObject]()
             
@@ -47,6 +48,8 @@ class KonectionsTableVC: UITableViewController {
  
                 
                 let user = User()
+                
+                user.UID = connectionUID
                 
                 user.displayName = dictionary["displayName"] as? String ?? "Display name not found"
                 user.jobTitle = dictionary["jobTitle"] as? String ?? "Job title not found"
@@ -102,7 +105,7 @@ class KonectionsTableVC: UITableViewController {
         
         let user = users[indexPath.row]
         cell.textLabel?.text = user.displayName
-        cell.detailTextLabel?.text = user.jobTitle
+        cell.detailTextLabel?.text = user.UID
         
 
         
@@ -129,6 +132,23 @@ class KonectionsTableVC: UITableViewController {
         }
         
         return cell
+        
+    }
+    
+    var index = 0
+    var selectedUID: String?
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        index = indexPath.row
+        selectedUID = users[index].UID
+        
+        performSegue(withIdentifier: "viewUserProfile", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var segueDestination = segue.destination as! ProfileVC
+        
+        segueDestination.currentUserUID = selectedUID
         
     }
     

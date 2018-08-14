@@ -17,4 +17,5 @@ class User: NSObject {
     var profileImageURL: String?
     var sharedEmail: String?
     var twitter: String?
+    var UID: String?
 }
