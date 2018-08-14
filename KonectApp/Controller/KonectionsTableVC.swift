@@ -31,8 +31,6 @@ class KonectionsTableVC: UITableViewController {
     
     func fetchUsers() {
         dataREF.REF_USERS.child(currentUserUID!).child("connections").observe(.childAdded) { (snapshot) in
-            print("HHDHDHHDHDHDHDHDHDHD")
-            print(snapshot.key)
             let connectionUID = snapshot.key
             
             let query = self.dataREF.REF_USERS.child(connectionUID).child("details").queryOrdered(byChild: "displayName")
@@ -50,20 +48,12 @@ class KonectionsTableVC: UITableViewController {
                 
                 let user = User()
                 
-                user.displayName = dictionary["displayName"] as? String ?? "Name not found"
+                user.displayName = dictionary["displayName"] as? String ?? "Display name not found"
+                user.jobTitle = dictionary["jobTitle"] as? String ?? "Job title not found"
                 user.sharedEmail = dictionary["sharedEmail"] as? String ?? "Email not found"
-                user.bio = dictionary["bio"] as? String ?? "Bio not found"
-                user.facebook = dictionary["facebook"] as? String ?? "Facebook not found"
-                user.twitter = dictionary["twitter"] as? String ?? "Twitter not found"
-                user.profileImageURL = dictionary["profileImageURL"] as? String ?? "https://firebasestorage.googleapis.com/v0/b/konect-u.appspot.com/o/F233E787-9799-4210-9321-733C373088C7.png?alt=media&token=52791d6f-3d17-4ba0-932e-329abb8e1a05"
+                user.profileImageURL = dictionary["profileImageURL"] as? String ?? "https://firebasestorage.googleapis.com/v0/b/konect-u.appspot.com/o/30A008CD-B4E6-414A-A7DC-B633ACBC5BEB.png?alt=media&token=d68e850f-b4cd-42d4-8d7a-7ef18a5ebfdd"
                 
-                
-                
-
-                print(user.displayName!)
                 self.users.append(user)
-                print("NEW USER???")
-                print(self.users)
                 
                 DispatchQueue.main.async { self.tableView.reloadData() }
 //                    if let value = child.value as? NSDictionary {
@@ -112,7 +102,7 @@ class KonectionsTableVC: UITableViewController {
         
         let user = users[indexPath.row]
         cell.textLabel?.text = user.displayName
-        cell.detailTextLabel?.text = user.sharedEmail
+        cell.detailTextLabel?.text = user.jobTitle
         
 
         
@@ -129,6 +119,7 @@ class KonectionsTableVC: UITableViewController {
                         }
 
                         DispatchQueue.main.async {
+                            cell.imageView?.layer.cornerRadius = 10
                             cell.imageView?.image = UIImage(data: data!)
                         }
 

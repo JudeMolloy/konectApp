@@ -133,18 +133,16 @@ class AddDetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
         
         
-        
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC")
-        self.present(tabBarVC, animated: true, completion: nil)
-        
     }
     
     func updateData() {
         
         dump(data)
         DataService.instance.addDetailsForUser(values: data as [String : AnyObject])
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC")
+        self.present(tabBarVC, animated: true, completion: nil)
         
     }
     
