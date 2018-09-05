@@ -105,7 +105,7 @@ class KonectionsTableVC: UITableViewController {
         
         let user = users[indexPath.row]
         cell.textLabel?.text = user.displayName
-        cell.detailTextLabel?.text = user.UID
+        cell.detailTextLabel?.text = user.jobTitle
         
 
         
@@ -146,7 +146,7 @@ class KonectionsTableVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var segueDestination = segue.destination as! ProfileVC
+        var segueDestination = segue.destination as! ViewOtherUser
         
         segueDestination.currentUserUID = selectedUID
         

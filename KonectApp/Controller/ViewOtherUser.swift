@@ -1,21 +1,21 @@
 //
-//  ProfileVC.swift
+//  ViewOtherUser.swift
 //  KonectApp
 //
-//  Created by Jude Molloy on 01/02/2018.
+//  Created by Jude Molloy on 29/08/2018.
 //  Copyright © 2018 Jude Molloy. All rights reserved.
 //
+
 
 import UIKit
 import Firebase
 
-class ProfileVC: UIViewController {
-
+class ViewOtherUser: UIViewController {
+    
     let dataREF = DataService.instance
     
     var currentUserUID = Auth.auth().currentUser?.uid
     
-    @IBOutlet weak var openCameraButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
     
@@ -26,6 +26,9 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -42,7 +45,7 @@ class ProfileVC: UIViewController {
         
         let user = User()
         
-            dataREF.REF_USERS.child(currentUserUID!).child("details").observeSingleEvent(of: .value) { (snapshot) in
+        dataREF.REF_USERS.child(currentUserUID!).child("details").observeSingleEvent(of: .value) { (snapshot) in
             if let value = snapshot.value as? NSDictionary {
                 
                 user.displayName = value["displayName"] as? String ?? "Display name not found"
@@ -110,13 +113,8 @@ class ProfileVC: UIViewController {
         
     }
     
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var segueDestination = segue.destination as! QRCodeVC
-//
-//        segueDestination.currentUserUID = currentUserUID
-//    }
-
+    
+    
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
         

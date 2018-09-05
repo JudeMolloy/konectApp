@@ -11,6 +11,7 @@
 		CE0FBF6A201D1CA000E5FB83 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FBF69201D1CA000E5FB83 /* CreateAccountVC.swift */; };
 		CE1772C5202904F5002600DE /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1772C4202904F5002600DE /* QRCodeVC.swift */; };
 		CE191BB9202B99BE0071313D /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE191BB8202B99BE0071313D /* QRScannerController.swift */; };
+		CE2D42492136B44300CD7E78 /* ViewOtherUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D42482136B44300CD7E78 /* ViewOtherUser.swift */; };
 		CE2F1BBD20096DF40090E802 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F1BBC20096DF40090E802 /* AuthService.swift */; };
 		CE3F23A1203DEFA20023EF9B /* AddDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F23A0203DEFA20023EF9B /* AddDetailsVC.swift */; };
 		CE458A4E20238E0B00D7140E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE458A4D20238E0B00D7140E /* ProfileVC.swift */; };
@@ -37,6 +38,7 @@
 		CE0FBF69201D1CA000E5FB83 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		CE1772C4202904F5002600DE /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		CE191BB8202B99BE0071313D /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		CE2D42482136B44300CD7E78 /* ViewOtherUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOtherUser.swift; sourceTree = "<group>"; };
 		CE2F1BBC20096DF40090E802 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE3F23A0203DEFA20023EF9B /* AddDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsVC.swift; sourceTree = "<group>"; };
 		CE458A4D20238E0B00D7140E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				CE81216B2038569B00A0C1E6 /* KonectionsVC.swift */,
 				CE8121712038D6C200A0C1E6 /* KonectionsTableVC.swift */,
 				CE3F23A0203DEFA20023EF9B /* AddDetailsVC.swift */,
+				CE2D42482136B44300CD7E78 /* ViewOtherUser.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				CE81D6D11FD45A3F000AF38E /* ViewController.swift in Sources */,
 				CEE769F81FD9B9F400C14797 /* RoundedButton.swift in Sources */,
 				CE81216C2038569B00A0C1E6 /* KonectionsVC.swift in Sources */,
+				CE2D42492136B44300CD7E78 /* ViewOtherUser.swift in Sources */,
 				CE191BB9202B99BE0071313D /* QRScannerController.swift in Sources */,
 				CE3F23A1203DEFA20023EF9B /* AddDetailsVC.swift in Sources */,
 				CE0FBF6A201D1CA000E5FB83 /* CreateAccountVC.swift in Sources */,

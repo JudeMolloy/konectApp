@@ -111,11 +111,11 @@ class ProfileVC: UIViewController {
     }
     
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var segueDestination = segue.destination as! QRCodeVC
-//
-//        segueDestination.currentUserUID = currentUserUID
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var segueDestination = segue.destination as! QRCodeVC
+        
+        segueDestination.currentUserUID = currentUserUID
+    }
 
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
